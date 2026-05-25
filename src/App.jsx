@@ -1,4 +1,4 @@
-\import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -39,15 +39,13 @@ function App() {
 
   // WHATSAPP FUNCTION
 
+      
   const openWhatsApp = () => {
-
-    window.open(
-      "https://wa.me/917558499024?text=Hello%20Zyntrix%2C%20I%20am%20interested%20in%20your%20web%20development%20services.",
-      "_blank"
-    );
-
-  };
-
+  window.open(
+    "https://wa.me/917558499024?text=Hello%20Zyntrix%2C%20I%20am%20interested%20in%20your%20web%20development%20services.",
+    "_blank"
+  );
+};
   // PROJECT OPEN FUNCTION
 
   const openProject = (url) => {
