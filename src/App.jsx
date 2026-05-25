@@ -425,7 +425,7 @@ function App() {
 
           <input
             type="tel"
-            name="phone"
+            name="phone"git pull origin main 
             placeholder="Phone Number"
             required
           />

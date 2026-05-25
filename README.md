@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -14,3 +15,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+=======
+# zyntrix-portfolio
+Zyntrix is a modern business portfolio website built using React.js, featuring smooth animations, premium UI design, responsive layouts, and interactive user experience. The platform showcases web development services, project portfolios, and a professional enquiry system integrated with Formspree for real-time client communication.
+>>>>>>> e7ebaada672e86fea2ab36029673b1125d48aa32
