@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+\import React, { useState, useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -37,9 +37,18 @@ function App() {
 
   }, []);
 
+  // WHATSAPP FUNCTION
+
   const openWhatsApp = () => {
-    window.open("https://wa.me/919876543210", "_blank");
+
+    window.open(
+      "https://wa.me/917558499024?text=Hello%20Zyntrix%2C%20I%20am%20interested%20in%20your%20web%20development%20services.",
+      "_blank"
+    );
+
   };
+
+  // PROJECT OPEN FUNCTION
 
   const openProject = (url) => {
     window.open(url, "_blank");
@@ -80,7 +89,10 @@ function App() {
 
         <div className="hero-container">
 
-          <div className="hero-text" data-aos="fade-right">
+          <div
+            className="hero-text"
+            data-aos="fade-right"
+          >
 
             <h1>
               We Build Powerful
@@ -135,7 +147,10 @@ function App() {
 
       {/* SERVICES */}
 
-      <section id="services" className="section">
+      <section
+        id="services"
+        className="section"
+      >
 
         <h2 className="section-title">
           Our Services
@@ -270,7 +285,10 @@ function App() {
 
       {/* PROJECTS */}
 
-      <section id="work" className="section">
+      <section
+        id="work"
+        className="section"
+      >
 
         <h2 className="section-title">
           Our Work
@@ -391,7 +409,10 @@ function App() {
 
       {/* CONTACT */}
 
-      <section id="contact" className="section">
+      <section
+        id="contact"
+        className="section"
+      >
 
         <h2 className="section-title">
           Let's Build Your Website
@@ -425,7 +446,7 @@ function App() {
 
           <input
             type="tel"
-            name="phone"git pull origin main 
+            name="phone"
             placeholder="Phone Number"
             required
           />
@@ -464,6 +485,24 @@ function App() {
 
         </form>
 
+        {/* WHATSAPP BUTTON */}
+
+        <div
+          style={{
+            marginTop: "30px",
+            textAlign: "center",
+          }}
+        >
+
+          <button
+            onClick={openWhatsApp}
+            className="btn primary"
+          >
+            💬 Chat on WhatsApp
+          </button>
+
+        </div>
+
       </section>
 
       {/* FOOTER */}
@@ -472,6 +511,10 @@ function App() {
 
         <p>
           © 2026 Zyntrix Solutions | Designed by Piyush
+        </p>
+
+        <p>
+          📞 WhatsApp: 7558499024
         </p>
 
       </footer>
