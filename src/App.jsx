@@ -1,3 +1,5 @@
+// src/App.jsx
+
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
@@ -6,7 +8,7 @@ import "aos/dist/aos.css";
 function App() {
 
   const [text, setText] = useState("");
-  const fullText = "Web Solutions for Businesses";
+  const fullText = "Premium Web Solutions For Modern Businesses";
 
   useEffect(() => {
 
@@ -21,7 +23,7 @@ function App() {
         clearInterval(interval);
       }
 
-    }, 80);
+    }, 70);
 
     return () => clearInterval(interval);
 
@@ -37,26 +39,26 @@ function App() {
 
   }, []);
 
-  // WHATSAPP FUNCTION
-
-      
   const openWhatsApp = () => {
-  window.open(
-    "https://wa.me/917558499024?text=Hello%20Zyntrix%2C%20I%20am%20interested%20in%20your%20web%20development%20services.",
-    "_blank"
-  );
-};
-  // PROJECT OPEN FUNCTION
+
+    window.open(
+      "https://wa.me/917558499024?text=Hello%20Zyntrix%2C%20I%20want%20a%20professional%20website%20for%20my%20business.",
+      "_blank"
+    );
+
+  };
 
   const openProject = (url) => {
+
     window.open(url, "_blank");
+
   };
 
   return (
 
     <div className="app">
 
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
 
       <header className="header">
 
@@ -70,7 +72,11 @@ function App() {
 
           <a href="#services">Services</a>
 
+          <a href="#stats">Stats</a>
+
           <a href="#work">Projects</a>
+
+          <a href="#testimonials">Clients</a>
 
           <a href="#contact">Contact</a>
 
@@ -78,72 +84,133 @@ function App() {
 
       </header>
 
-      {/* HERO SECTION */}
+      {/* ================= HERO ================= */}
 
-      <section id="home" className="hero">
+     {/* HERO TEXT SECTION */}
 
-        <div className="blur blur1"></div>
-        <div className="blur blur2"></div>
+<div className="hero-text" data-aos="fade-right">
 
-        <div className="hero-container">
+  <p className="developer-tag">
+    🚀 Available for Freelance Work
+  </p>
 
-          <div
-            className="hero-text"
-            data-aos="fade-right"
-          >
+  <h1>
+    Hi, I'm <span className="highlight-name">Piyush Satpute</span>
+  </h1>
 
-            <h1>
-              We Build Powerful
-              <span> Web Experiences</span>
-            </h1>
+  <h3 className="fullstack-title">
+    Full Stack Developer (React • Java • Spring Boot)
+  </h3>
 
-            <h2 className="typing">
-              {text}|
-            </h2>
+  <h2 className="typing">
+    {text}|
+  </h2>
 
-            <p>
-              We help businesses build modern,
-              attractive and high-converting websites
-              that grow online presence and generate leads.
-            </p>
+  <p className="hero-description">
+    I build modern, scalable and high-performance web applications
+    that help startups and businesses grow with better UI, faster systems,
+    and clean architecture using React and Java technologies.
+  </p>
 
-            <div className="hero-buttons">
+  {/* TECH STACK */}
 
-              <button
-                onClick={openWhatsApp}
-                className="btn primary"
-              >
-                🚀 Get Free Consultation
-              </button>
+  <div className="tech-stack">
 
-              <a
-                href="#work"
-                className="btn secondary"
-              >
-                View Projects
-              </a>
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+      <span>HTML</span>
+    </div>
 
-            </div>
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+      <span>CSS</span>
+    </div>
 
-          </div>
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+      <span>JavaScript</span>
+    </div>
 
-          <div
-            className="hero-image"
-            data-aos="zoom-in"
-          >
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+      <span>React</span>
+    </div>
 
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKuXPy61cY9rMnnfu0NWkNs28psJGY4IDkw&s"
-              alt="profile"
-            />
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+      <span>Java</span>
+    </div>
 
-          </div>
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
+      <span>Spring Boot</span>
+    </div>
 
+    <div className="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+      <span>MySQL</span>
+    </div>
+
+  </div>
+
+  {/* BUTTONS */}
+
+  <div className="hero-buttons">
+
+    <button onClick={openWhatsApp} className="btn primary">
+      🚀 Let’s Work Together
+    </button>
+
+    <a href="#work" className="btn secondary">
+      View My Projects
+    </a>
+
+  </div>
+
+</div>
+
+      {/* ================= STATS ================= */}
+
+      <section
+        id="stats"
+        className="stats-section"
+      >
+
+        <div
+          className="stats-card"
+          data-aos="fade-up"
+        >
+          <h2>10+</h2>
+          <p>Projects Completed</p>
+        </div>
+
+        <div
+          className="stats-card"
+          data-aos="fade-up"
+        >
+          <h2>10+</h2>
+          <p>Happy Clients</p>
+        </div>
+
+        <div
+          className="stats-card"
+          data-aos="fade-up"
+        >
+          <h2>99%</h2>
+          <p>Client Satisfaction</p>
+        </div>
+
+        <div
+          className="stats-card"
+          data-aos="fade-up"
+        >
+          <h2>24/7</h2>
+          <p>Support</p>
         </div>
 
       </section>
 
-      {/* SERVICES */}
+      {/* ================= SERVICES ================= */}
 
       <section
         id="services"
@@ -151,7 +218,7 @@ function App() {
       >
 
         <h2 className="section-title">
-          Our Services
+          Premium Services
         </h2>
 
         <div className="services-grid">
@@ -170,8 +237,8 @@ function App() {
             </h3>
 
             <p>
-              Professional business websites
-              that establish your online presence.
+              Premium websites that build trust,
+              attract customers and grow your brand.
             </p>
 
           </div>
@@ -186,12 +253,32 @@ function App() {
             </div>
 
             <h3>
-              E-Commerce Websites
+              E-Commerce Stores
             </h3>
 
             <p>
-              Online stores with payment integration
-              and premium UI experience.
+              Modern online stores with payment
+              gateways and conversion-focused design.
+            </p>
+
+          </div>
+
+          <div
+            className="service-card"
+            data-aos="fade-up"
+          >
+
+            <div className="icon">
+              📱
+            </div>
+
+            <h3>
+              Responsive Design
+            </h3>
+
+            <p>
+              Fully responsive websites that look
+              stunning on all devices and screens.
             </p>
 
           </div>
@@ -210,8 +297,8 @@ function App() {
             </h3>
 
             <p>
-              Powerful web applications tailored
-              for your business needs.
+              Powerful custom dashboards and web
+              applications for your business needs.
             </p>
 
           </div>
@@ -220,12 +307,17 @@ function App() {
 
       </section>
 
-      {/* WHY CHOOSE US */}
+
+  
+
+
+
+      {/* ================= WHY CHOOSE US ================= */}
 
       <section className="section">
 
         <h2 className="section-title">
-          Why Choose Us
+          Why Clients Choose Zyntrix
         </h2>
 
         <div className="grid">
@@ -240,7 +332,8 @@ function App() {
             </h3>
 
             <p>
-              High quality websites delivered quickly.
+              Professional websites delivered quickly
+              without compromising quality.
             </p>
 
           </div>
@@ -255,8 +348,8 @@ function App() {
             </h3>
 
             <p>
-              Websites designed to attract customers
-              and increase conversions.
+              Every section is designed to increase
+              leads and customer conversions.
             </p>
 
           </div>
@@ -267,12 +360,12 @@ function App() {
           >
 
             <h3>
-              💼 Premium Design
+              💎 Luxury UI/UX
             </h3>
 
             <p>
-              Beautiful UI with smooth animations
-              and modern user experience.
+              Stunning modern interfaces with rich
+              animations and smooth interactions.
             </p>
 
           </div>
@@ -281,7 +374,7 @@ function App() {
 
       </section>
 
-      {/* PROJECTS */}
+      {/* ================= PROJECTS ================= */}
 
       <section
         id="work"
@@ -289,12 +382,10 @@ function App() {
       >
 
         <h2 className="section-title">
-          Our Work
+          Featured Projects
         </h2>
 
         <div className="grid">
-
-          {/* PROJECT 1 */}
 
           <div
             className="card project"
@@ -313,7 +404,7 @@ function App() {
               </h3>
 
               <p>
-                Modern gym website with premium UI.
+                Modern gym platform with premium UI.
               </p>
 
               <button
@@ -328,8 +419,6 @@ function App() {
             </div>
 
           </div>
-
-          {/* PROJECT 2 */}
 
           <div
             className="card project"
@@ -348,24 +437,21 @@ function App() {
               </h3>
 
               <p>
-                Smart inventory management portal
-                for businesses.
+                Smart inventory management dashboard.
               </p>
 
               <button
                 onClick={() =>
-                  openProject("https://inventory-management-system-gules.vercel.app")
+                  openProject("https://mobile-care-inventory.vercel.app")
                 }
                 className="small-btn"
               >
-                View Portal
+                View Project
               </button>
 
             </div>
 
           </div>
-
-          {/* PROJECT 3 */}
 
           <div
             className="card project"
@@ -374,23 +460,22 @@ function App() {
 
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              alt="portfolio"
+              alt="crickverse"
             />
 
             <div className="overlay">
 
               <h3>
-                Portfolio Website
+                CrickVerse
               </h3>
 
               <p>
-                Personal branding website
-                with modern animations.
+                Cricket information portal with live UI.
               </p>
 
               <button
                 onClick={() =>
-                  openProject("https://yourlink.com")
+                  openProject("https://crick-verse.vercel.app")
                 }
                 className="small-btn"
               >
@@ -405,7 +490,72 @@ function App() {
 
       </section>
 
-      {/* CONTACT */}
+      {/* ================= TESTIMONIALS ================= */}
+
+      <section
+        id="testimonials"
+        className="section"
+      >
+
+        <h2 className="section-title">
+          Client Feedback
+        </h2>
+
+        <div className="grid">
+
+          <div
+            className="card testimonial"
+            data-aos="fade-up"
+          >
+
+            <p>
+              “Amazing premium design and smooth
+              experience. Highly professional work.”
+            </p>
+
+            <h4>
+              — Fitness Brand Owner
+            </h4>
+
+          </div>
+
+          <div
+            className="card testimonial"
+            data-aos="fade-up"
+          >
+
+            <p>
+              “Our business website now looks modern
+              and gets more enquiries daily.”
+            </p>
+
+            <h4>
+              — Startup Founder
+            </h4>
+
+          </div>
+
+          <div
+            className="card testimonial"
+            data-aos="fade-up"
+          >
+
+            <p>
+              “Very responsive and delivered exactly
+              what we wanted.”
+            </p>
+
+            <h4>
+              — Local Business Client
+            </h4>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= CONTACT ================= */}
 
       <section
         id="contact"
@@ -413,12 +563,14 @@ function App() {
       >
 
         <h2 className="section-title">
-          Let's Build Your Website
+          Let’s Build Something Amazing
         </h2>
 
         <p className="contact-text">
-          Ready to grow online?
-          Let’s create something amazing together.
+
+          Ready to grow your business online?
+          Contact Zyntrix today.
+
         </p>
 
         <form
@@ -483,14 +635,7 @@ function App() {
 
         </form>
 
-        {/* WHATSAPP BUTTON */}
-
-        <div
-          style={{
-            marginTop: "30px",
-            textAlign: "center",
-          }}
-        >
+        <div className="whatsapp-center">
 
           <button
             onClick={openWhatsApp}
@@ -503,16 +648,24 @@ function App() {
 
       </section>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
 
       <footer>
 
+        <h2>
+          Zyntrix Solutions
+        </h2>
+
         <p>
-          © 2026 Zyntrix Solutions | Designed by Piyush
+          Premium Websites • UI/UX • Web Apps
         </p>
 
         <p>
           📞 WhatsApp: 7558499024
+        </p>
+
+        <p>
+          © 2026 All Rights Reserved
         </p>
 
       </footer>
@@ -520,6 +673,7 @@ function App() {
     </div>
 
   );
+
 }
 
 export default App;
